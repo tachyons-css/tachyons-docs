@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router';
 import Intro from './intro'
 import Testimonials from './testimonials'
 import NpmModules from './npmModules'
@@ -27,11 +26,6 @@ export default class HomePage extends Component {
   render() {
     return (
       <main className="w-100">
-        {/*
-          //Testing out Nested links for the doc pages
-          <Link to="/docs/links" className="dib f5 f4-ns fw6 mt0 mb1 link black-70 dim"> Links </Link>
-          <Link to="/docs/lists" className="dib f5 f4-ns fw6 mt0 mb1 link black-70 dim"> Lists </Link>
-          */}
         <section className="bt b--black-10 bg-black-0125 w-100 pv5 pv6-ns">
           <Intro tachyons={this.getTachyonsStats()}/>
           <TwoColList items={PRINCIPLES} title="Principles" />

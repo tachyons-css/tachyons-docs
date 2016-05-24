@@ -1,5 +1,7 @@
 module.exports = [
   '/',
   '/components',
-  '/docs'
+  '/docs',
+  '/docs/elements/links',
+  '/docs/elements/lists'
 ];

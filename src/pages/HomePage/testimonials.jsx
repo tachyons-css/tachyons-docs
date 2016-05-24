@@ -12,7 +12,10 @@ export default class Testimonials extends Component {
     return (
       <div key={'quote' + index} className="cf w-100">
         <BlockQuote copy={item1.copy} footer={item1.footer} colOne />
-        <BlockQuote copy={item2.copy} footer={item2.footer} colTwo />
+        {item2 ?
+          <BlockQuote copy={item2.copy} footer={item2.footer} colTwo />
+        : null
+        }
       </div>
     )
   }
