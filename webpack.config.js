@@ -20,6 +20,7 @@ module.exports = {
     alias: {
       'src': __dirname + '/src',
       'data': __dirname + '/src/data',
+      'components': __dirname + '/src/components',
     },
     root: path.resolve('./src') // must be absolute path
   },

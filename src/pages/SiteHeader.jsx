@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Link } from 'react-router'
+import { IndexLink, Link } from 'react-router'
 
 export default class SiteHeader extends Component {
 
@@ -8,12 +8,12 @@ export default class SiteHeader extends Component {
     return (
       <header className="w-100 dt pa3 ph5-ns bg-near-white">
         <div className="dtc v-mid tl w-50">
-          <Link to="/" className="dib f5 f4-ns fw6 mt0 mb1 link black-70 dim">
+          <IndexLink to="/" className="dib f5 f4-ns fw6 mt0 mb1 link black-70 dim">
             Tachyons
             <div className="dib">
               <small className="nowrap f6 mt2 mt3-ns pr2 black-70 fw2">&nbsp; v{this.props.tachyons.version}</small>
             </div>
-          </Link>
+          </IndexLink>
         </div>
 
         <nav className="db dtc v-mid w-100 tr">

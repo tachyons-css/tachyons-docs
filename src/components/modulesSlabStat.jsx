@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import {roundTwoDecimal} from '../helpers/utils'
 
 const PROP_TYPES = {
   stats: React.PropTypes.object.isRequired,
 }
 
-export default class ModuleStats extends Component {
+export default class ModulesSlabStat extends Component {
   render() {
     return (
       <div>
@@ -29,7 +30,7 @@ export default class ModuleStats extends Component {
         <dl className="dib mr4">
           <dt className="f6 db pr2">Size of Avg. Rule </dt>
           <dd className="db pl0 ml0 f4 f2-ns b">
-            {this.props.stats.rules.average}
+            {roundTwoDecimal(this.props.stats.rules.average)}
           </dd>
         </dl>
       </div>
@@ -37,5 +38,5 @@ export default class ModuleStats extends Component {
   }
 }
 
-ModuleStats.propTypes = PROP_TYPES;
+ModulesSlabStat.propTypes = PROP_TYPES;
 

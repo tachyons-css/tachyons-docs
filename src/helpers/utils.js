@@ -11,6 +11,11 @@ const checkPerformance = (myFunction) => {
   console.log('Took', (t1 - t0).toFixed(4), 'milliseconds to generate:', result);
 }
 
+const roundTwoDecimal = (num) => {
+  return num % 1 !== 0 ? num.toFixed(2) : num;
+}
+
 export {
-  checkPerformance
+  checkPerformance,
+  roundTwoDecimal
 }

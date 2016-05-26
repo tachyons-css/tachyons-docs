@@ -4,7 +4,7 @@
   "description": "Documentation site for Tachyons - http://tachyons.io/",
   "main": "index.js",
   "scripts": {
-    "start": "npm run buildModuleStats && webpack-dev-server --content-base dist/",
+    "start": "npm run buildModuleStats && webpack-dev-server --content-base dist --history-api-fallback",
     "buildModuleStats": "node scripts/buildModuleStats.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist/* && webpack"
