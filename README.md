@@ -35,5 +35,5 @@ For static content, we keep most of that in `json` files in `src/data/`. If you 
 
 Notes during early WIP stage:
 
-* To add new routes, currently you need to add it to both `src/paths.js` and `src/routes.js`.
+* IMPORTANT: Anytime you add a new react route, you currently need to add it in two places. It must be in `src/paths.js` and either `src/routes.js` or write it in your html as `<Link to="docs/elements/images" ../>`. Thinking of a dynamic solution so you only have to write it once..
 

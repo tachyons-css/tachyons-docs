@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import BlockQuote from './components/blockQuote'
-import TwoColQuote from './components/twoColQuote'
+import BlockQuote from 'components/blockQuote'
+import TwoColQuote from 'components/twoColQuote'
 
 const PROP_TYPES = {
   title: React.PropTypes.string,

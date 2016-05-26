@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Intro from './intro'
 import Testimonials from './testimonials'
 import NpmModules from './npmModules'
-import TwoColList from './components/twoColList'
+import TwoColList from 'components/twoColList'
 
 import {PRINCIPLES, FEATURES, TESTIMONIALS} from 'src/data/homepageContent'
 import ModuleStats from 'src/data/tachyonsStats'

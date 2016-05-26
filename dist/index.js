@@ -26077,9 +26077,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _docsPage2 = _interopRequireDefault(_docsPage);
 
-	var _moduleDocs = __webpack_require__(252);
+	var _moduleSection = __webpack_require__(252);
 
-	var _moduleDocs2 = _interopRequireDefault(_moduleDocs);
+	var _moduleSection2 = _interopRequireDefault(_moduleSection);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26091,7 +26091,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/docs', component: _docsPage2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/docs/:category/:tachyonsModule', component: _moduleDocs2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/docs/:category/:tachyonsModule', component: _moduleSection2.default })
 	  )
 	);
 
@@ -27087,7 +27087,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  console.log('Took', (t1 - t0).toFixed(4), 'milliseconds to generate:', result);
 	};
 
+	var roundTwoDecimal = function roundTwoDecimal(num) {
+	  return num % 1 !== 0 ? num.toFixed(2) : num;
+	};
+
 	exports.checkPerformance = checkPerformance;
+	exports.roundTwoDecimal = roundTwoDecimal;
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "utils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
@@ -27108,8 +27113,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
 
 	var _intro = __webpack_require__(240);
 
@@ -27177,16 +27180,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	          'section',
 	          { className: 'bt b--black-10 bg-black-0125 w-100 pv5 pv6-ns' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/docs/elements/links', className: 'dib f5 f4-ns fw6 mt0 mb1 link black-70 dim' },
-	            ' Links '
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/docs/elements/lists', className: 'dib f5 f4-ns fw6 mt0 mb1 link black-70 dim' },
-	            ' Lists '
-	          ),
 	          _react2.default.createElement(_intro2.default, { tachyons: this.getTachyonsStats() }),
 	          _react2.default.createElement(_twoColList2.default, { items: _homepageContent.PRINCIPLES, title: 'Principles' }),
 	          _react2.default.createElement(_twoColList2.default, { items: _homepageContent.FEATURES, title: 'Features' })
@@ -27407,7 +27400,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        'div',
 	        { key: 'quote' + index, className: 'cf w-100' },
 	        _react2.default.createElement(_blockQuote2.default, { copy: item1.copy, footer: item1.footer, colOne: true }),
-	        _react2.default.createElement(_blockQuote2.default, { copy: item2.copy, footer: item2.footer, colTwo: true })
+	        item2 ? _react2.default.createElement(_blockQuote2.default, { copy: item2.copy, footer: item2.footer, colTwo: true }) : null
 	      );
 	    }
 	  }, {
@@ -28136,6 +28129,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28157,9 +28152,199 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'Docs Nav'
+	        'footer',
+	        { className: 'ph3 ph5-ns pt3 pb5' },
+	        _react2.default.createElement(
+	          'h2',
+	          { className: 'f6 fw7 ttu tracked' },
+	          'Elements'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { className: 'f5 fw4 dim link blue db pv1', to: '/docs/elements/images' },
+	          'Images'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { className: 'f5 fw4 dim link blue db pv1', to: '/docs/elements/links' },
+	          'Links'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { className: 'f5 fw4 dim link blue db pv1', to: '/docs/elements/lists' },
+	          'Lists'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { className: 'f5 fw4 dim link blue db pv1 dn', to: '/docs/elements/forms' },
+	          'Forms'
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cf w-100 mt3' },
+	          _react2.default.createElement(
+	            'article',
+	            { className: 'fn fl-ns w-100 w-25-l' },
+	            _react2.default.createElement(
+	              'h2',
+	              { className: 'f6 fw7 ttu tracked', id: 'typography' },
+	              'Typography'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/type-scale' },
+	              'Type Scale'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/typography' },
+	              'Measure'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/line-height' },
+	              'Line Height / Leading'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/letter-spacing' },
+	              'Tracking'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/font-weight' },
+	              'Font Weights'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/font-family' },
+	              'Font Families'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/font-style' },
+	              'Font Style'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/vertical-align' },
+	              'Vertical Align'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/text-align' },
+	              'Text Align'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/text-transform' },
+	              'Text Transform'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/text-decoration' },
+	              'Text Decoration'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/typography/white-space' },
+	              'White Space'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'article',
+	            { className: 'fn fl-ns w-100 w-25-l' },
+	            _react2.default.createElement(
+	              'h2',
+	              { className: 'f6 fw7 ttu tracked', id: 'layout' },
+	              'Layout'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/debug' },
+	              'Debugging'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/box-sizing' },
+	              'Box Sizing'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/spacing' },
+	              'Spacing'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/floats' },
+	              'Floats'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/clears' },
+	              'Clearfix'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/display' },
+	              'Display'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/widths' },
+	              'Widths'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/max-widths' },
+	              'Max Widths'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/heights' },
+	              'Heights'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/layout/position' },
+	              'Position'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'article',
+	            { className: 'fn fl-ns w-100 w-25-l' },
+	            _react2.default.createElement(
+	              'h2',
+	              { className: 'f6 fw7 ttu tracked' },
+	              'Theming'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/themes/skins' },
+	              'Skins'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/themes/hovers' },
+	              'Hovers'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/themes/background-size' },
+	              'Background Size'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/themes/borders' },
+	              'Borders'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'f5 fw4 dim link blue db pv1', to: '/docs/themes/border-radius' },
+	              'Border Radius'
+	            )
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -28189,9 +28374,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _docsHeader = __webpack_require__(253);
+	var _moduleHeader = __webpack_require__(253);
 
-	var _docsHeader2 = _interopRequireDefault(_docsHeader);
+	var _moduleHeader2 = _interopRequireDefault(_moduleHeader);
 
 	var _docsPage = __webpack_require__(255);
 
@@ -28209,43 +28394,30 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var ModuleDocs = function (_Component) {
-	  _inherits(ModuleDocs, _Component);
+	var ModuleSection = function (_Component) {
+	  _inherits(ModuleSection, _Component);
 
-	  function ModuleDocs(props) {
-	    _classCallCheck(this, ModuleDocs);
+	  function ModuleSection() {
+	    _classCallCheck(this, ModuleSection);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ModuleDocs).call(this, props));
-
-	    _this.state = { currentModule: _this.props.params.tachyonsModule };
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ModuleSection).apply(this, arguments));
 	  }
 
-	  _createClass(ModuleDocs, [{
+	  _createClass(ModuleSection, [{
 	    key: 'getModuleStats',
 	    value: function getModuleStats() {
 	      var _this2 = this;
 
 	      return _tachyonsStats2.default.find(function (module) {
-	        return module.id === 'tachyons-' + _this2.state.currentModule;
+	        return module.id === 'tachyons-' + _this2.props.params.tachyonsModule;
 	      });
 	    }
 	  }, {
 	    key: 'renderHeader',
 	    value: function renderHeader() {
-	      var module = void 0,
-	          primaryCopy = void 0,
-	          secondaryCopy = void 0;
-	      module = this.state.currentModule;
-
-	      if (_docsPage2.default[module]) {
-	        primaryCopy = _docsPage2.default[module].PRIMARY_COPY ? _docsPage2.default[module].PRIMARY_COPY : null;
-	        secondaryCopy = _docsPage2.default[module].SECONDARY_COPY ? _docsPage2.default[module].SECONDARY_COPY : null;
-	      }
-	      return _react2.default.createElement(_docsHeader2.default, {
+	      var module = this.props.params.tachyonsModule;
+	      return _react2.default.createElement(_moduleHeader2.default, {
 	        moduleName: module,
-	        primaryCopy: primaryCopy,
-	        secondaryCopy: secondaryCopy,
 	        moduleStats: this.getModuleStats()
 	      });
 	    }
@@ -28260,12 +28432,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }]);
 
-	  return ModuleDocs;
+	  return ModuleSection;
 	}(_react.Component);
 
-	exports.default = ModuleDocs;
+	exports.default = ModuleSection;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "moduleDocs.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "moduleSection.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 253 */
@@ -28285,9 +28457,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _moduleStats = __webpack_require__(254);
+	var _modulesSlabStat = __webpack_require__(254);
 
-	var _moduleStats2 = _interopRequireDefault(_moduleStats);
+	var _modulesSlabStat2 = _interopRequireDefault(_modulesSlabStat);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28298,21 +28470,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var PROP_TYPES = {
-	  moduleStats: _react2.default.PropTypes.object.isRequired,
-	  primaryCopy: _react2.default.PropTypes.string,
-	  secondaryCopy: _react2.default.PropTypes.string
+	  moduleStats: _react2.default.PropTypes.object.isRequired
 	};
 
-	var DocsHeader = function (_Component) {
-	  _inherits(DocsHeader, _Component);
+	var ModuleHeader = function (_Component) {
+	  _inherits(ModuleHeader, _Component);
 
-	  function DocsHeader() {
-	    _classCallCheck(this, DocsHeader);
+	  function ModuleHeader() {
+	    _classCallCheck(this, ModuleHeader);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(DocsHeader).apply(this, arguments));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ModuleHeader).apply(this, arguments));
 	  }
 
-	  _createClass(DocsHeader, [{
+	  _createClass(ModuleHeader, [{
 	    key: 'render',
 	    value: function render() {
 
@@ -28336,30 +28506,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	          { className: 'f4 b dib pl0 ml0 mr4' },
 	          stats.fileSize
 	        ),
-	        _react2.default.createElement(_moduleStats2.default, { stats: stats }),
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'measure f4 f3-ns lh-copy' },
-	          this.props.primaryCopy
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'measure lh-copy f5 f4-ns' },
-	          this.props.secondaryCopy
-	        )
+	        _react2.default.createElement(_modulesSlabStat2.default, { stats: stats })
 	      );
 	    }
 	  }]);
 
-	  return DocsHeader;
+	  return ModuleHeader;
 	}(_react.Component);
 
-	exports.default = DocsHeader;
+	exports.default = ModuleHeader;
 
 
-	DocsHeader.propTypes = PROP_TYPES;
+	ModuleHeader.propTypes = PROP_TYPES;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "docsHeader.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "moduleHeader.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 254 */
@@ -28367,7 +28527,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28378,6 +28538,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _utils = __webpack_require__(238);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28391,90 +28553,90 @@ return /******/ (function(modules) { // webpackBootstrap
 	  stats: _react2.default.PropTypes.object.isRequired
 	};
 
-	var ModuleStats = function (_Component) {
-	  _inherits(ModuleStats, _Component);
+	var ModulesSlabStat = function (_Component) {
+	  _inherits(ModulesSlabStat, _Component);
 
-	  function ModuleStats() {
-	    _classCallCheck(this, ModuleStats);
+	  function ModulesSlabStat() {
+	    _classCallCheck(this, ModulesSlabStat);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ModuleStats).apply(this, arguments));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ModulesSlabStat).apply(this, arguments));
 	  }
 
-	  _createClass(ModuleStats, [{
-	    key: "render",
+	  _createClass(ModulesSlabStat, [{
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "dl",
-	          { className: "dib mr4 mt0" },
+	          'dl',
+	          { className: 'dib mr4 mt0' },
 	          _react2.default.createElement(
-	            "dt",
-	            { className: "f6 db" },
-	            "Declarations "
+	            'dt',
+	            { className: 'f6 db' },
+	            'Declarations '
 	          ),
 	          _react2.default.createElement(
-	            "dd",
-	            { className: "db pl0 ml0 f4 f2-ns b" },
+	            'dd',
+	            { className: 'db pl0 ml0 f4 f2-ns b' },
 	            this.props.stats.declarations
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "dl",
-	          { className: "dib mr4" },
+	          'dl',
+	          { className: 'dib mr4' },
 	          _react2.default.createElement(
-	            "dt",
-	            { className: "f6 db pr2" },
-	            "Selectors "
+	            'dt',
+	            { className: 'f6 db pr2' },
+	            'Selectors '
 	          ),
 	          _react2.default.createElement(
-	            "dd",
-	            { className: "db pl0 ml0 f4 f2-ns b" },
+	            'dd',
+	            { className: 'db pl0 ml0 f4 f2-ns b' },
 	            this.props.stats.selectors
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "dl",
-	          { className: "dib mr4" },
+	          'dl',
+	          { className: 'dib mr4' },
 	          _react2.default.createElement(
-	            "dt",
-	            { className: "f6 db pr2" },
-	            "Max. Specificity Score "
+	            'dt',
+	            { className: 'f6 db pr2' },
+	            'Max. Specificity Score '
 	          ),
 	          _react2.default.createElement(
-	            "dd",
-	            { className: "db pl0 ml0 f4 f2-ns b" },
+	            'dd',
+	            { className: 'db pl0 ml0 f4 f2-ns b' },
 	            this.props.stats.specificity.max
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "dl",
-	          { className: "dib mr4" },
+	          'dl',
+	          { className: 'dib mr4' },
 	          _react2.default.createElement(
-	            "dt",
-	            { className: "f6 db pr2" },
-	            "Size of Avg. Rule "
+	            'dt',
+	            { className: 'f6 db pr2' },
+	            'Size of Avg. Rule '
 	          ),
 	          _react2.default.createElement(
-	            "dd",
-	            { className: "db pl0 ml0 f4 f2-ns b" },
-	            this.props.stats.rules.average
+	            'dd',
+	            { className: 'db pl0 ml0 f4 f2-ns b' },
+	            (0, _utils.roundTwoDecimal)(this.props.stats.rules.average)
 	          )
 	        )
 	      );
 	    }
 	  }]);
 
-	  return ModuleStats;
+	  return ModulesSlabStat;
 	}(_react.Component);
 
-	exports.default = ModuleStats;
+	exports.default = ModulesSlabStat;
 
 
-	ModuleStats.propTypes = PROP_TYPES;
+	ModulesSlabStat.propTypes = PROP_TYPES;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "moduleStats.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/d.berg/Code/tachyons-project/tachyons-docs-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "modulesSlabStat.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 255 */
