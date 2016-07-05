@@ -81,6 +81,9 @@ var buildNpmData = function() {
     return data =  {
       id: module.name,
       name: module.name,
+      nickName: module.metadata && module.metadata.nickName ? module.metadata.nickName : null,
+      category: module.metadata ? module.metadata.category : null,
+      isCore: module.metadata ? module.metadata.isCore : null,
       version: module.version,
       fileSize: moduleSize,
       declarations: moduleObj.declarations.total,
