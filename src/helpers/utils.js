@@ -15,7 +15,21 @@ const roundTwoDecimal = (num) => {
   return num % 1 !== 0 ? num.toFixed(2) : num;
 }
 
+const formatNickname = (moduleName) => {
+  return moduleName.replace('tachyons-', '')
+}
+
+const formatLabel = (moduleName) => {
+  const nickName = formatNickname(moduleName);
+  const words = nickName.split('-');
+  return words.map( word => {
+    return word.charAt(0).toUpperCase() + word.slice(1) + " ";
+  })
+}
+
 export {
   checkPerformance,
-  roundTwoDecimal
+  roundTwoDecimal,
+  formatNickname,
+  formatLabel
 }
