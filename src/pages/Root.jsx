@@ -23,9 +23,7 @@ export default class Root extends Component {
     return (
       <div>
         <SiteHeader tachyons={this.getTachyonsStats()} />
-        <main>
-          { this.props.children }
-        </main>
+        { this.props.children }
         <SiteFooter modules={this.getTachyonsModulesStats()}/>
       </div>
     );

@@ -15,7 +15,7 @@ export default class BlockQuote extends Component {
 
   getSectionClasses() {
     return className({
-      "fl w-100 w-50-ns mh0 mb2 mb5-ns border-box": true,
+      "fl w-100 w-50-l mh0 mb2 mb5-l border-box": true,
       "pr0 pr3-ns": this.props.colOne,
       "pl0 pl3-ns": this.props.colTwo,
     })
@@ -24,7 +24,7 @@ export default class BlockQuote extends Component {
   render() {
     return (
         <blockquote className={this.getSectionClasses()}>
-          <p className="f6 f5-ns measure lh-copy pr1 pr0-l i" dangerouslySetInnerHTML={this.createMarkup(this.props.copy)} />
+          <p className="f6 f5-ns measure lh-copy i" dangerouslySetInnerHTML={this.createMarkup(this.props.copy)} />
           {this.props.footer ?
             <footer>
               <p dangerouslySetInnerHTML={this.createMarkup(this.props.footer)} />

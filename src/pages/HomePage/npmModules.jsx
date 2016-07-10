@@ -8,25 +8,22 @@ export default class NpmModules extends Component {
   renderModules() {
     return this.props.modules.map( module => {
       return (
-        <div key={module.name} className="mb3 fl w-100 w-50-m w-33-l">
-          <a className="db f4 link mb1 dim near-black b" href={`http://npmjs.com/package/${module.name}`}>
+        <div key={module.name} className="mb3 mb4-ns fl w-100 w-50-m w-33-l">
+          <a className="db f5 link mb1 dim near-black b" href={`http://github.com/tachyons-css/${module.name}`}>
             {module.name}
           </a>
-          <div>
-            <span className="fw4 pr2">v{module.version}</span>
-            <span>{module.fileSize}</span>
-            <a className="link dim near-black dib ml2 f6" href={`http://github.com/tachyons-css/${module.name}`}>View on GitHub</a>
-          </div>
+          <code className="f6 di fw4 pr2">v{module.version}</code>
+          <code className="f6 di black-60">{module.fileSize}</code>
         </div>
       )
     })
   }
   render() {
     return (
-      <section className="ph3 ph5-ns bg-white cf pv5 pv6-ns" id="npm">
+      <section className="ph3 ph5-ns bg-white cf pv5 pv6-ns" id="modules">
         <div className="fl w-100">
-          <h1>
-            <a href="#npm" className="link near-black">NPM</a>
+          <h1 className="f5 fw6 ttu tracked">
+            <a href="#npm" className="link near-black">Module List</a>
           </h1>
           <p className="f5 f3-ns lh-copy mt0 mb4 measure">
             The main tachyons repo is just a group of of encapsulated css modules available on npm and github.
@@ -37,7 +34,17 @@ export default class NpmModules extends Component {
           </p>
           <code className="dib mb4 ba b--light-gray f6 ph2 pv3" style={{"backgroundColor": "#d1ffff"}}>npm install --save-dev tachyons-module-name</code>
         </div>
+
         {this.renderModules()}
+
+        <div className="fl w-100">
+          <h1 className="f5 fw6 ttu tracked">
+            <a href="#related-projects" className="link near-black">Related Projects</a>
+          </h1>
+          <a className="db link f5 dim black-70" href="https://github.com/fab1an/react-native-tachyons">react native tachyons</a>
+          <a className="db link f5 dim black-70" href="https://github.com/tachyons-css/tachyons-webpack">tachyons webpack</a>
+          <a className="db link f5 dim black-70" href="http://basscss.com">BassCss</a>
+        </div>
       </section>
     )
   }
