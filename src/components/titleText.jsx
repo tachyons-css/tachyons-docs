@@ -14,18 +14,18 @@ export default class TitleText extends Component {
   }
 
   renderTitle() {
-    return <h2 className="f4 f3-ns fw6 mb0" dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
+    return <h2 className="f4 f2-ns fw6 mb0" dangerouslySetInnerHTML={this.createMarkup(this.props.title)} />
   }
 
   renderCopy() {
-    return <p className="f5 measure lh-copy mt0" dangerouslySetInnerHTML={this.createMarkup(this.props.copy)} />
+    return <p className="mv0 f5 lh-copy measure" dangerouslySetInnerHTML={this.createMarkup(this.props.copy)} />
   }
 
   getSectionClasses() {
     return className({
-      "pv2 fl w-100 w-50-ns": true,
-      "pr0 pr2-ns": this.props.colOne,
-      "pl0 pl2-ns": this.props.colTwo,
+      "pv2 fl w-100 w-50-l": true,
+      "pr0 pr2-l": this.props.colOne,
+      "pl0 pl2-l": this.props.colTwo,
     })
   }
 

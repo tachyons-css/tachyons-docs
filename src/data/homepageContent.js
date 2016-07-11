@@ -1,8 +1,8 @@
 const PRINCIPLES = [
-  { title: "Responsive", copy: "Everything should be 100% responsive. Your website should work regardless of a users device or screensize. Don't break the functionality of HTML with CSS." },
-  { title: "Readable", copy: "No matter the lighting, or the device, fontSizes should be large enough and contrast should be high enough." },
-  { title: "Performant", copy: "Code isn't for making a developers life easier. It's for improving the lives of our users. If it's not doing that, why write it. A developer's time is not precious. A user's time is.  Code should be optimized for performance." },
-  { title: "Modular", copy: "Modules &gt; Monoliths Tachyons isn't a monolithic framework. It's a collection of self contained modules that can be mixed and matched or used independently. Use what you want, leave what you don't." },
+  { title: "Responsive", copy: "Everything should be 100% responsive. Your website should work regardless of a users device or screensize." },
+  { title: "Readable", copy: "No matter the lighting, or the device, font-sizes should be large enough and contrast should be high enough for your users to easily read your content." },
+  { title: "Performant", copy: "Code should be optimized for performance." },
+  { title: "Modular", copy: "Modules > Monoliths Tachyons isn't a monolithic framework. It's a collection of self contained modules that can be mixed and matched or used independently. Only use what you need." },
   { title: "Reusable", copy: "Doing one thing well, promotes reusability and reduces redundancy in a codebase." },
   { title: "Easy", copy: "Designing in the browser should be easy. If a computer can do it, you shouldn't have to." },
 ]
@@ -14,7 +14,7 @@ const FEATURES = [
   { title: "Composable classes", copy: "Construct anything from complex layouts to responsive components with a series of single purpose classes." },
   { title: "Cohesive design system", copy: "Scale based on the powers of two. Starting at .25" },
   { title: "Responsive Grid", copy: "Infinitely nestable. Fully fluid. Extremely light-weight." },
-  { title: "Customize, or extend", copy: "Tachyons is meant to be edited and customized to meet the needs of your product. It's just css. It isn't precious. Don't be afraid to change: class names, media queries, breakpoints, or values." },
+  { title: "Easy to Customize and extend", copy: "Tachyons is meant to be edited and customized to meet the needs of your product. It's just css. It isn't precious. Don't be afraid to change: class names, media queries, breakpoints, or values." },
 ]
 
 const TESTIMONIALS = [

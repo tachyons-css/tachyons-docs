@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Link } from 'react-router'
+import { IndexLink, Link } from 'react-router'
 
 export default class SiteFooter extends Component {
   render() {
@@ -13,9 +13,9 @@ export default class SiteFooter extends Component {
           <span className="dib v-mid white fw6" style={{"fontSize": "12px"}}>Tweet</span>
         </a>
         <div className="mb4">
-          <Link to="/" className="black-70 link dim b dib mr3">
+          <IndexLink to="/" className="black-70 link dim b dib mr3">
             Home
-          </Link>
+          </IndexLink>
           <Link to="/docs" className="black-70 link dim b dib mr3">
             Docs
           </Link>
@@ -24,18 +24,15 @@ export default class SiteFooter extends Component {
           </Link>
         </div>
         <article>
-          <iframe src="https://ghbtns.com/github-btn.html?user=tachyons-css&repo=tachyons&type=star&count=true" frameBorder="0" scrolling="0" width="100px" height="20px"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=tachyons-css&repo=tachyons&type=star&count=true" frameBorder="0" scrolling="0" width="100px" height="20px" className="mr2"></iframe>
           <iframe src="https://ghbtns.com/github-btn.html?user=tachyons-css&repo=tachyons&type=fork&count=true" frameBorder="0" scrolling="0" width="100px" height="20px"></iframe>
         </article>
         <div className="mt4">
-          <a className="black-70 link dim b dib mr3 pv2" href="http://tachyons-slack-invite.herokuapp.com" title="Join our Slack Channel">
+          <a className="ba b--black-20 bg-white black-70 link br2 dim b dib mr3 mb4 pv2 ph3" href="http://tachyons-slack-invite.herokuapp.com" title="Join our Slack Channel">
             Join our Slack Channel
           </a>
-          <a className="black-70 link dim b dib mr3 pv2" href="https://github.com/tachyons-css/tachyons/issues" title="File a bug, request a feature, ask a question!">
+          <a className="ba b--black-20 bg-white br2 black-70 link dim b dib pv2 ph3" href="https://github.com/tachyons-css/tachyons/issues" title="File a bug, request a feature, ask a question!">
             Open an Issue
-          </a>
-          <a className="black-70 link dim b dib mr3 pv2" href="https://github.com/tachyons-css" title="Tachyons-css on GitHub">
-            GitHub
           </a>
         </div>
         <p className="measure copy lh-copy">
@@ -43,6 +40,9 @@ export default class SiteFooter extends Component {
           question in our slack channel. We're here to try and help make designing in
           the browser fun.
         </p>
+        <div className="pt4 cf mw5">
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=tachyonsio" id="_carbonads_js"></script>
+        </div>
         <small className="f6 measure db lh-copy mt5">
           A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle
           that always moves faster than light.
@@ -51,7 +51,9 @@ export default class SiteFooter extends Component {
           <br />
           ταχύς or tachys, meaning "swift, quick, fast, rapid"
         </small>
+
       </footer>
+
     )
   }
 };

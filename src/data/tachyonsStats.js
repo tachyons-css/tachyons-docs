@@ -2,8 +2,8 @@ module.exports = [
   {
     "id": "tachyons",
     "name": "tachyons",
-    "version": "4.0.0-beta.35",
-    "fileSize": "7.88 KB"
+    "version": "4.0.1",
+    "fileSize": "9.25 KB"
   },
   {
     "id": "tachyons-background-size",
@@ -30,16 +30,16 @@ module.exports = [
     "nickName": null,
     "category": null,
     "isCore": null,
-    "version": "4.0.5",
-    "fileSize": "297 B",
-    "declarations": 35,
-    "selectors": 35,
+    "version": "4.1.0",
+    "fileSize": "504 B",
+    "declarations": 58,
+    "selectors": 58,
     "specificity": {
       "max": 10,
       "average": 10
     },
     "rules": {
-      "total": 35,
+      "total": 58,
       "average": 1
     }
   },
@@ -87,16 +87,16 @@ module.exports = [
     "nickName": null,
     "category": null,
     "isCore": null,
-    "version": "2.0.2",
-    "fileSize": "185 B",
-    "declarations": 24,
-    "selectors": 24,
+    "version": "2.1.0",
+    "fileSize": "247 B",
+    "declarations": 40,
+    "selectors": 40,
     "specificity": {
       "max": 10,
       "average": 10
     },
     "rules": {
-      "total": 24,
+      "total": 40,
       "average": 1
     }
   },
@@ -106,17 +106,17 @@ module.exports = [
     "nickName": null,
     "category": "theming",
     "isCore": true,
-    "version": "2.2.0",
-    "fileSize": "294 B",
-    "declarations": 64,
-    "selectors": 40,
+    "version": "2.2.1",
+    "fileSize": "228 B",
+    "declarations": 48,
+    "selectors": 24,
     "specificity": {
       "max": 10,
       "average": 10
     },
     "rules": {
-      "total": 40,
-      "average": 1.6
+      "total": 24,
+      "average": 2
     }
   },
   {
@@ -163,7 +163,7 @@ module.exports = [
     "nickName": null,
     "category": null,
     "isCore": null,
-    "version": "5.1.2",
+    "version": "5.2.0",
     "fileSize": "22 B",
     "declarations": 0,
     "selectors": 0,
@@ -562,16 +562,16 @@ module.exports = [
     "nickName": null,
     "category": "theming",
     "isCore": true,
-    "version": "3.1.6",
-    "fileSize": "717 B",
-    "declarations": 107,
-    "selectors": 107,
+    "version": "3.2.1",
+    "fileSize": "1.13 KB",
+    "declarations": 153,
+    "selectors": 153,
     "specificity": {
       "max": 20,
-      "average": 14.299065420560748
+      "average": 13.006535947712418
     },
     "rules": {
-      "total": 107,
+      "total": 153,
       "average": 1
     }
   },
@@ -790,7 +790,7 @@ module.exports = [
     "nickName": null,
     "category": null,
     "isCore": null,
-    "version": "1.0.1",
+    "version": "2.0.0",
     "fileSize": "160 B",
     "declarations": 12,
     "selectors": 12,

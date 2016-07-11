@@ -25,8 +25,8 @@ export default class TwoColQuote extends Component {
 
     return (
       <blockquote className="fl w-100 mh0 pa3 pa4-l mb2 mb5-ns border-box bg-near-white">
-        <p className="fl w-100 w-50-ns mh0 mt0 pr0 pr3-ns  measure i lh-copy" dangerouslySetInnerHTML={this.createMarkup(colOne)} />
-        <p className="fl w-100 w-50-ns mh0 mt0 pl0 pl3-ns  measure i lh-copy" dangerouslySetInnerHTML={this.createMarkup(colTwo)} />
+        <p className="fl w-100 w-50-l mh0 mt0 pr0 pr3-l measure i lh-copy" dangerouslySetInnerHTML={this.createMarkup(colOne)} />
+        <p className="fl w-100 w-50-l mh0 mt0 pl0 pl3-l measure i lh-copy" dangerouslySetInnerHTML={this.createMarkup(colTwo)} />
 
         <footer className="fl w-100">
           <p dangerouslySetInnerHTML={this.createMarkup(this.props.footer)} />

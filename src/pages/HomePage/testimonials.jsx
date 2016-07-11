@@ -38,7 +38,7 @@ export default class Testimonials extends Component {
       <section className="bg-white pv5 pv6-ns bb bt b--light-gray" id="testimonials">
         <div className="ph3 ph5-ns">
           {this.props.title ?
-            <h1>{this.props.title}</h1>
+            <h1 className="f5 fw6 ttu tracke">{this.props.title}</h1>
           : null }
           <TwoColQuote copy={highlightedTestimonial.copy} footer={highlightedTestimonial.footer} />
           {this.renderRows(otherTestimonials)}
