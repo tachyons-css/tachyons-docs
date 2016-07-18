@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import ModulesSlabStat from 'components/modulesSlabStat'
 
 const PROP_TYPES = {
-  moduleStats: React.PropTypes.object.isRequired
+  moduleStats: React.PropTypes.object.isRequired,
+  children: React.PropTypes.node
 }
 
 export default class ModuleHeader extends Component {
@@ -18,6 +19,9 @@ export default class ModuleHeader extends Component {
         <span className="f4 b dib pl0 ml0 mr4">{`v${stats.version}`}</span>
         <span className="f4 b dib pl0 ml0 mr4">{stats.fileSize}</span>
         <ModulesSlabStat stats={stats} />
+
+        {this.props.children}
+
       </article>
     )
   }

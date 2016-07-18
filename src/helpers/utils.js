@@ -15,6 +15,10 @@ const roundTwoDecimal = (num) => {
   return num % 1 !== 0 ? num.toFixed(2) : num;
 }
 
+const capitalizeWord = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1) + " ";
+}
+
 const formatNickname = (moduleName) => {
   return moduleName.replace('tachyons-', '')
 }
@@ -23,13 +27,14 @@ const formatLabel = (moduleName) => {
   const nickName = formatNickname(moduleName);
   const words = nickName.split('-');
   return words.map( word => {
-    return word.charAt(0).toUpperCase() + word.slice(1) + " ";
+    return capitalizeWord(word);
   })
 }
 
 export {
   checkPerformance,
   roundTwoDecimal,
+  capitalizeWord,
   formatNickname,
   formatLabel
 }
