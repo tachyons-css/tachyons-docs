@@ -74,5 +74,17 @@
     "tachyons-widths": "tachyons-css/tachyons-widths",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "tachyons-border-colors": "^4.1.4",
+    "tachyons-border-style": "^4.0.1",
+    "tachyons-border-widths": "^3.0.1",
+    "tachyons-colors": "^5.2.5",
+    "tachyons-coordinates": "^4.0.1",
+    "tachyons-outlines": "^1.0.0",
+    "tachyons-overflow": "^4.0.1",
+    "tachyons-utilities": "^1.2.6",
+    "tachyons-visibility": "^2.0.1",
+    "tachyons-word-break": "^3.0.1"
   }
 }
