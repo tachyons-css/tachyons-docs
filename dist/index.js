@@ -27288,7 +27288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              "code",
 	              { className: "code f6 dib pa2 bg-near-white", style: { "fontSize": "14px" } },
 	              "<",
-	              "link rel=\"stylesheet\" href=\"https://npmcdn.com/tachyons@" + this.props.tachyons.version + "/css/tachyons.min.css\"",
+	              "link rel=\"stylesheet\" href=\"https://unpkg.com/tachyons@" + this.props.tachyons.version + "/css/tachyons.min.css\"",
 	              ">"
 	            )
 	          ),
