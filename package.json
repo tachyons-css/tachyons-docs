@@ -1,6 +1,6 @@
 {
   "name": "tachyons-documentation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Documentation site for Tachyons - http://tachyons.io/",
   "main": "index.js",
   "scripts": {
