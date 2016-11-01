@@ -44,6 +44,7 @@
     "tachyons-box-shadow": "tachyons-css/tachyons-box-shadow",
     "tachyons-box-sizing": "tachyons-css/tachyons-box-sizing",
     "tachyons-clears": "tachyons-css/tachyons-clears",
+    "tachyons-cli": "^1.0.9",
     "tachyons-debug": "tachyons-css/tachyons-debug",
     "tachyons-display": "tachyons-css/tachyons-display",
     "tachyons-floats": "tachyons-css/tachyons-floats",
